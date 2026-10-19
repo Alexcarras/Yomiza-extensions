@@ -32,8 +32,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          # Fuerza a incluir archivos que no sean HTML/Markdown
+          search_dotfiles: true
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
